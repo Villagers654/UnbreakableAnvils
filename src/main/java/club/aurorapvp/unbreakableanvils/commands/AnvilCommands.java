@@ -1,6 +1,7 @@
 package club.aurorapvp.unbreakableanvils.commands;
 
 import club.aurorapvp.unbreakableanvils.UnbreakableAnvils;
+import club.aurorapvp.unbreakableanvils.configs.Lang;
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CatchUnknown;
 import co.aikar.commands.annotation.CommandAlias;
@@ -43,6 +44,8 @@ public class AnvilCommands extends BaseCommand {
     NamespacedKey key = new NamespacedKey(UnbreakableAnvils.INSTANCE, "ua" + index);
 
     container.set(key, PersistentDataType.STRING, block.getLocation().toString());
+
+    p.sendMessage(Lang.getComponent("set"));
   }
 
   @Subcommand("unset")
@@ -69,6 +72,8 @@ public class AnvilCommands extends BaseCommand {
         }
       }
     }
+
+    p.sendMessage(Lang.getComponent("unset"));
   }
 
   @Default
