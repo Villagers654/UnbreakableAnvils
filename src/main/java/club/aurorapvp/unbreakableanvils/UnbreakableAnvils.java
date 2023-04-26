@@ -14,6 +14,8 @@ public final class UnbreakableAnvils extends JavaPlugin {
     // Plugin startup logic
     INSTANCE = this;
 
+    Commands.init();
+
     Bukkit.getPluginManager().registerEvents(new AnvilEvents(), INSTANCE);
   }
 
