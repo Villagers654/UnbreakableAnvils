@@ -1,0 +1,14 @@
+name: UnbreakableAnvils
+version: '${version}'
+main: club.aurorapvp.unbreakableanvils.UnbreakableAnvils
+api-version: 1.19
+commands:
+  unbreakableanvils:
+    description: UnbreakableAnvils commands
+    permission: unbreakableanvils.admin
+    aliases:
+      - ua
+permissions:
+  admin:
+    description: Enables use of UnbreakableAnvils
+    default: op
