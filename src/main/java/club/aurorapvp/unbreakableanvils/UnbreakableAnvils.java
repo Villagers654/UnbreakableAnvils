@@ -1,5 +1,6 @@
 package club.aurorapvp.unbreakableanvils;
 
+import club.aurorapvp.unbreakableanvils.configs.Lang;
 import club.aurorapvp.unbreakableanvils.events.AnvilEvents;
 import java.io.File;
 import org.bukkit.Bukkit;
@@ -18,6 +19,7 @@ public final class UnbreakableAnvils extends JavaPlugin {
     DATA_FOLDER = this.getDataFolder();
 
     Commands.init();
+    Lang.init();
 
     Bukkit.getPluginManager().registerEvents(new AnvilEvents(), INSTANCE);
   }
