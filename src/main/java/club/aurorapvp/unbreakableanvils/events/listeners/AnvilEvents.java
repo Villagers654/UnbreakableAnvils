@@ -1,4 +1,4 @@
-package club.aurorapvp.unbreakableanvils.events;
+package club.aurorapvp.unbreakableanvils.events.listeners;
 
 import club.aurorapvp.unbreakableanvils.configs.Lang;
 import org.bukkit.Location;

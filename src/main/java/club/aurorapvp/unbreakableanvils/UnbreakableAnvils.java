@@ -2,9 +2,8 @@ package club.aurorapvp.unbreakableanvils;
 
 import club.aurorapvp.unbreakableanvils.commands.CommandManager;
 import club.aurorapvp.unbreakableanvils.configs.Lang;
-import club.aurorapvp.unbreakableanvils.events.AnvilEvents;
+import club.aurorapvp.unbreakableanvils.events.EventManager;
 import java.io.File;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,8 +20,7 @@ public final class UnbreakableAnvils extends JavaPlugin {
 
     CommandManager.init();
     Lang.init();
-
-    Bukkit.getPluginManager().registerEvents(new AnvilEvents(), INSTANCE);
+    EventManager.init();
   }
 
   @Override
