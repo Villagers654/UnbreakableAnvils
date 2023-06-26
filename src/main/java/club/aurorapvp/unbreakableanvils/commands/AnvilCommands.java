@@ -20,10 +20,10 @@ import org.bukkit.persistence.PersistentDataType;
 
 @CommandAlias("unbreakableanvils|ua")
 public class AnvilCommands extends BaseCommand {
-
   @Subcommand("set")
   @CommandPermission("unbreakableanvils.admin")
   @Description("Sets an anvil as unbreakable")
+  @SuppressWarnings("unused")
   public void onSet(Player p) {
     Block block = p.getTargetBlockExact(5);
 
@@ -32,7 +32,7 @@ public class AnvilCommands extends BaseCommand {
       return;
     }
 
-    int index = -1;
+    int index = 0;
     PersistentDataContainer container = p.getWorld().getPersistentDataContainer();
 
     for (NamespacedKey setKey : container.getKeys()) {
@@ -51,6 +51,7 @@ public class AnvilCommands extends BaseCommand {
   @Subcommand("unset")
   @CommandPermission("unbreakableanvils.admin")
   @Description("Makes an unbreakable anvil breakable")
+  @SuppressWarnings("unused")
   public void onUnset(Player p) {
     Block block = p.getTargetBlockExact(5);
 
@@ -74,11 +75,5 @@ public class AnvilCommands extends BaseCommand {
     }
 
     p.sendMessage(Lang.getComponent("unset"));
-  }
-
-  @Default
-  @CatchUnknown
-  public void onUnknown(CommandSender sender) {
-
   }
 }

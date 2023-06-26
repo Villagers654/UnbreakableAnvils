@@ -1,9 +1,9 @@
-package club.aurorapvp.unbreakableanvils;
+package club.aurorapvp.unbreakableanvils.commands;
 
-import club.aurorapvp.unbreakableanvils.commands.AnvilCommands;
+import club.aurorapvp.unbreakableanvils.UnbreakableAnvils;
 import co.aikar.commands.PaperCommandManager;
 
-public class Commands {
+public class CommandManager {
   public static PaperCommandManager MANAGER = new PaperCommandManager(UnbreakableAnvils.INSTANCE);
 
   public static void init() {
