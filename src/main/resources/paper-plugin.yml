@@ -13,6 +13,6 @@ commands:
     aliases:
       - ua
 permissions:
-  admin:
+  unbreakableanvils.admin:
     description: Enables use of UnbreakableAnvils
     default: op
