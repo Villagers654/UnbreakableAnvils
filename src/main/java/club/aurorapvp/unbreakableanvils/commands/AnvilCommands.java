@@ -20,6 +20,7 @@ import org.bukkit.persistence.PersistentDataType;
 
 @CommandAlias("unbreakableanvils|ua")
 public class AnvilCommands extends BaseCommand {
+
   @Subcommand("set")
   @CommandPermission("unbreakableanvils.admin")
   @Description("Sets an anvil as unbreakable")
@@ -36,9 +37,11 @@ public class AnvilCommands extends BaseCommand {
     PersistentDataContainer container = p.getWorld().getPersistentDataContainer();
 
     for (NamespacedKey setKey : container.getKeys()) {
-      int keyIndex = Integer.parseInt(setKey.getKey().replace("ua", ""));
+      if (setKey.getKey().startsWith("ua")) {
+        int keyIndex = Integer.parseInt(setKey.getKey().replace("ua", ""));
 
-      index = Math.max(index, keyIndex);
+        index = Math.max(index, keyIndex);
+      }
     }
 
     NamespacedKey key = new NamespacedKey(UnbreakableAnvils.INSTANCE, "ua" + index);
