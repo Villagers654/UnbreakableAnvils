@@ -30,9 +30,9 @@ public class Lang {
     }
 
     DEFAULTS.put("prefix", "~<gradient:#FFAA00:#FF55FF><bold>UnbreakableAnvils ><reset>~");
-    DEFAULTS.put("set", "prefix <gradient:#FFAA00:#FF55FF>Unbreakable anvil set!");
-    DEFAULTS.put("unset", "prefix <gradient:#FFAA00:#FF55FF>Unbreakable anvil unset!");
-    DEFAULTS.put("break-denied", "prefix <gradient:#FFAA00:#FF55FF>This anvil is unbreakable!");
+    DEFAULTS.put("set", "prefix <yellow>Unbreakable anvil set!");
+    DEFAULTS.put("unset", "prefix <yellow>Unbreakable anvil unset!");
+    DEFAULTS.put("break-denied", "prefix <yellow>This anvil is unbreakable!");
 
     for (String path : DEFAULTS.keySet()) {
       if (!get().contains(path) || get().getString(path) == null) {
