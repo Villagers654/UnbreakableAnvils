@@ -1,11 +1,11 @@
 plugins {
     id 'java'
-    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id 'io.github.goooler.shadow' version '8.1.8'
 }
 
 
 group = 'club.aurorapvp'
-version = '1.1.0'
+version = '1.2.0'
 
 repositories {
     mavenCentral()
@@ -25,7 +25,7 @@ repositories {
 dependencies {
     implementation "co.aikar:acf-paper:0.5.1-SNAPSHOT"
 
-    compileOnly "io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT"
+    compileOnly "io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT"
 }
 
 build {
@@ -39,7 +39,7 @@ shadowJar {
     relocate 'co.aikar.locales', 'club.aurorapvp.shaded.locales'
 }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 21
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
